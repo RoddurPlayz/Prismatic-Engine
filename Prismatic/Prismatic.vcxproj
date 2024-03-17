@@ -71,22 +71,22 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>$(SolutionDir)Prismatic\Prismatic\lib\x64</OutDir>
+    <OutDir>$(SolutionDir)Prismatic\Prismatic\lib\x64\</OutDir>
     <IntDir>$(SolutionDir)junk\$(ProjectName)\x64\$(Configuration)\</IntDir>
     <LibraryPath>$(SolutionDir)Prismatic\Prismatic\lib\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <OutDir>$(SolutionDir)Prismatic\Prismatic\lib\x64</OutDir>
+    <OutDir>$(SolutionDir)Prismatic\Prismatic\lib\x64\</OutDir>
     <IntDir>$(SolutionDir)junk\$(ProjectName)\x64\$(Configuration)\</IntDir>
     <LibraryPath>$(SolutionDir)Prismatic\Prismatic\lib\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>$(SolutionDir)Prismatic\Prismatic\lib\x86</OutDir>
+    <OutDir>$(SolutionDir)Prismatic\Prismatic\lib\x86\</OutDir>
     <IntDir>$(SolutionDir)junk\$(ProjectName)\x86\$(Configuration)\</IntDir>
     <LibraryPath>$(SolutionDir)Prismatic\Prismatic\lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>$(SolutionDir)Prismatic\Prismatic\lib\x86</OutDir>
+    <OutDir>$(SolutionDir)Prismatic\Prismatic\lib\x86\</OutDir>
     <IntDir>$(SolutionDir)junk\$(ProjectName)\x86\$(Configuration)\</IntDir>
     <LibraryPath>$(SolutionDir)Prismatic\Prismatic\lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
@@ -94,7 +94,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>GLEW_STATIC;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <BuildStlModules>false</BuildStlModules>
       <LanguageStandard>stdcpp20</LanguageStandard>
@@ -111,7 +111,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>GLEW_STATIC;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <BuildStlModules>false</BuildStlModules>
       <LanguageStandard>stdcpp20</LanguageStandard>
@@ -128,7 +128,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>GLEW_STATIC;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <BuildStlModules>false</BuildStlModules>
       <LanguageStandard>stdcpp20</LanguageStandard>
@@ -145,7 +145,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>GLEW_STATIC;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <BuildStlModules>false</BuildStlModules>
       <LanguageStandard>stdcpp20</LanguageStandard>
@@ -159,14 +159,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Prismatic\include\Prismatic\Display.cpp" />
-    <ClCompile Include="Prismatic\include\Prismatic\Error.cpp" />
-    <ClCompile Include="Prismatic\include\Prismatic\Error.h" />
+    <ClCompile Include="Prismatic\include\Prismatic\__shader.cpp" />
+    <ClCompile Include="Prismatic\include\Prismatic\__display.cpp" />
+    <ClCompile Include="Prismatic\include\Prismatic\__error.cpp" />
+    <ClCompile Include="Prismatic\include\Prismatic\__error.h" />
     <ClCompile Include="Prismatic\include\Prismatic\prismatic.cpp" />
+    <ClCompile Include="Prismatic\include\Prismatic\__scene.cpp" />
+    <ClCompile Include="Prismatic\include\Prismatic\__macros.h" />
+    <ClCompile Include="Prismatic\include\Prismatic\__shape.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Prismatic\include\Prismatic\Display.h" />
+    <ClInclude Include="Prismatic\include\Prismatic\__display.h" />
     <ClInclude Include="Prismatic\include\Prismatic\prismatic.h" />
+    <ClInclude Include="Prismatic\include\Prismatic\__scene.h" />
+    <ClInclude Include="Prismatic\include\Prismatic\__shader.h" />
+    <ClInclude Include="Prismatic\include\Prismatic\__shape.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

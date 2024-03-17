@@ -18,13 +18,25 @@
     <ClCompile Include="Prismatic\include\Prismatic\prismatic.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Prismatic\include\Prismatic\Display.cpp">
+    <ClCompile Include="Prismatic\include\Prismatic\__display.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Prismatic\include\Prismatic\Error.cpp">
+    <ClCompile Include="Prismatic\include\Prismatic\__error.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Prismatic\include\Prismatic\Error.h">
+    <ClCompile Include="Prismatic\include\Prismatic\__error.h">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Prismatic\include\Prismatic\__scene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Prismatic\include\Prismatic\__macros.h">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Prismatic\include\Prismatic\__shape.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Prismatic\include\Prismatic\__shader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -32,7 +44,16 @@
     <ClInclude Include="Prismatic\include\Prismatic\prismatic.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Prismatic\include\Prismatic\Display.h">
+    <ClInclude Include="Prismatic\include\Prismatic\__display.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Prismatic\include\Prismatic\__scene.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Prismatic\include\Prismatic\__shape.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Prismatic\include\Prismatic\__shader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

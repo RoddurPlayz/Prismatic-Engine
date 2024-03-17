@@ -4,36 +4,15 @@
 void prismInit(std::source_location location)
 {
 	if (!glfwInit())
-	{
-		prismThrowError("Prismatic", location, -1);
-	}
+		prismThrowError("GLFW", "Crashed while initializing GLFW", -1, location);
 }
 
-template <typename Function, typename... Arguments>
-void prismInit(Function function, Arguments... arguments, std::source_location location)
+void prismSetOpenGLVersion(int major, int minor)
 {
-	if (!glfwInit())
-	{
-		prismThrowError("Prismatic", location, -1);
-	}
-
-	function(arguments...);
+	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, major);
+	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, minor);
 }
 
-void prismProcessEvents()
-{
-	glfwPollEvents();
-}
+void prismProcessEvents() { glfwPollEvents(); }
 
-void prismQuit()
-{
-	glfwTerminate();
-}
-
-template <typename Function, typename... Arguments>
-void prismQuit(Function function, Arguments... arguments)
-{
-	glfwTerminate();
-
-	function(arguments...);
-}
+void prismQuit() { glfwTerminate(); }
